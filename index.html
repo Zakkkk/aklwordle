@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AKL wordle</title>
+        <link rel="stylesheet" href="normalise.css" />
+        <link rel="icon" type="image/ico" sizes="48x48" href="favicon.ico" />
+        <style>
+            html,
+            body,
+            #app {
+                min-height: 100%;
+                background: #000;
+                color: #eee;
+                font-family: "Helvetica Neue", "Arial";
+            }
+
+            #app {
+                width: 90%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            #rows {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                max-width: 300px;
+
+                margin: 50px auto;
+                user-select: none;
+            }
+
+            #rows .row {
+                display: flex;
+                flex: auto;
+                gap: 10px;
+            }
+
+            #rows .row .letter {
+                font-family: "Jetbrains Mono", "Consolas", "Courier New";
+                font-weight: 700;
+                font-size: 30px;
+                flex: 1;
+                border: 2px solid #666;
+
+                height: 52px; /* cant be bothered anymore lmao */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #rows .row .letter.letter-black {
+                background: #000;
+            }
+
+            #rows .row .letter.letter-grey {
+                background: #444;
+            }
+
+            #rows .row .letter.letter-yellow {
+                background: #ba1;
+            }
+
+            #rows .row .letter.letter-green {
+                background: #0a0;
+            }
+
+            #extra {
+                width: 90%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            a {
+                color: #8af;
+            }
+
+            #keyboard {
+                user-select: none;
+                display: flex;
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+            #keyboard .key-row {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            #keyboard .key-row .key {
+                background: #333;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                font-family: "Jetbrains Mono", "Consolas", "Courier New";
+            }
+        </style>
+        <script src="words.js"></script>
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <div id="keyboard"></div>
+        <br />
+        <div id="extra">
+            <a target="_blank" href="words.js">Full list of words.</a>
+            <br />
+            <br />
+            Contains roughly the top 1500 words in the akl corpus.
+        </div>
+    </body>
+</html>
