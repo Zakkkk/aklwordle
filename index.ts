@@ -246,13 +246,15 @@ function handleInput(state: anyObject, e: KeyboardEvent): anyObject {
     [state, wordAccepted] = solidifyWord({ ...state });
 
     // now check if the game is over
-    if (
-      state.words.length == maxGuesses ||
-      state.words[state.words.length - 1].characters.join("") == chosenWord
-    ) {
-      state.gameOver = true;
-    } else if (wordAccepted) {
-      state.words.push(getEmptyWord());
+    if (wordAccepted) {
+      if (
+        state.words.length == maxGuesses ||
+        state.words[state.words.length - 1].characters.join("") == chosenWord
+      ) {
+        state.gameOver = true;
+      } else {
+        state.words.push(getEmptyWord());
+      }
     }
   } else if (e.key == "Backspace") {
     if (e.metaKey || e.altKey) {
