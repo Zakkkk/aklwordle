@@ -1666,4 +1666,5 @@ const validWords = [
   "fuckk", // smh ron
   "dvora", // pov oxey still using dvorak
   "turdy", // :garfsob:
+  "donut", // sottie doesnt know what a normal word is but thats okay
 ];
