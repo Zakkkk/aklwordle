@@ -289,8 +289,9 @@ document.addEventListener("DOMContentLoaded", function main() {
 
       renderState({ ...state }, dom!);
     }
+
     key.domTarget.addEventListener("click", keyPress);
-    key.domTarget.addEventListener("touchstart", keyPress);
+    // key.domTarget.addEventListener("touchstart", keyPress);
   });
 
   document.addEventListener("keydown", (e) => {

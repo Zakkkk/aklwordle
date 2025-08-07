@@ -1656,4 +1656,14 @@ const validWords = [
   "runit",
   "aujus",
   "heise",
+  // :doftective:
+  "casey",
+  "ovens",
+  "bitte",
+  "sybau", // sottie special
+  "sygau", // sottie special pt 2
+  "stoin", // click special, whatever this means lmao
+  "fuckk", // smh ron
+  "dvora", // pov oxey still using dvorak
+  "turdy", // :garfsob:
 ];
